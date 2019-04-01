@@ -14,7 +14,7 @@ import WorkingWithADesignSystem from "./lessons/working-with-a-design-system";
 const Border = styled("div", props => {
   return {
     border: `solid 1px ${props.$theme.colors.primary}`,
-    borderRadius: props.$theme.borders.radius100,
+    borderRadius: props.$theme.borders.radius200,
     minHeight: "98vh",
   };
 });
