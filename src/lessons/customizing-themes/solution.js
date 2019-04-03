@@ -39,6 +39,9 @@ const cancelTheme = createTheme({
   primary700: theme.colors.negative700,
 });
 
+// A red 'cancel' button is probably not the best approach to information hierarchy.
+// We recommend using an alternate button 'kind' instead. If you need to guard against
+// a desctructive action, you may want to apply a simple js confirmation.
 function CancelButton(props) {
   return (
     <ThemeProvider theme={cancelTheme}>
