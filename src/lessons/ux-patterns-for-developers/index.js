@@ -4,7 +4,7 @@ import {Block} from "baseui/block";
 import EmptyState from "./empty-state.js";
 import Hierarchy from "./hierarchy.js";
 
-// uncomment the components below to display them on the page
+// uncomment the components one-at-a-time below to display them on the page
 function UXPatternsForDevelopers() {
   return (
     <>

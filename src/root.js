@@ -55,6 +55,36 @@ function NotFound() {
   );
 }
 
+function Index() {
+  return (
+    <Block display="flex" justifyContent="center" font="font500">
+      <ul>
+        <li>
+          <a href="/working-with-a-design-system">
+            working with a design system
+          </a>
+        </li>
+
+        <li>
+          <a href="/css-in-js-with-styletron">css in js with styletron</a>
+        </li>
+
+        <li>
+          <a href="/component-overrides">component overrides</a>
+        </li>
+
+        <li>
+          <a href="/customizing-themes">customizing themes</a>
+        </li>
+
+        <li>
+          <a href="/ux-patterns-for-developers">ux patterns for developers</a>
+        </li>
+      </ul>
+    </Block>
+  );
+}
+
 const root = (
   <Wrapper>
     <Switch>
@@ -79,6 +109,8 @@ const root = (
         path="/working-with-a-design-system"
         component={WorkingWithADesignSystem}
       />
+
+      <Route exact path="/" component={Index} />
 
       <Route component={NotFound} />
     </Switch>

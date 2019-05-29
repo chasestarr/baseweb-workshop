@@ -5,7 +5,7 @@ import {cities, taquerias} from "./data";
 
 function WorkingWithADesignSystem() {
   return (
-    <Block textAlign="center" font="font500">
+    <Block display="flex" justifyContent="center" font="font500">
       Working with a Design System
     </Block>
   );
