@@ -1,5 +1,5 @@
 import React from "react";
-import {styled} from "baseui";
+import {BaseProvider, LightTheme, styled} from "baseui";
 import {Block} from "baseui/block";
 import {Tag} from "baseui/tag";
 
@@ -86,34 +86,40 @@ function Index() {
 }
 
 const root = (
-  <Wrapper>
-    <Switch>
-      <Route exact path="/component-overrides" component={ComponentOverrides} />
+  <BaseProvider theme={LightTheme}>
+    <Wrapper>
+      <Switch>
+        <Route
+          exact
+          path="/component-overrides"
+          component={ComponentOverrides}
+        />
 
-      <Route
-        exact
-        path="/css-in-js-with-styletron"
-        component={CSSInJSWithStyletron}
-      />
+        <Route
+          exact
+          path="/css-in-js-with-styletron"
+          component={CSSInJSWithStyletron}
+        />
 
-      <Route exact path="/customizing-themes" component={CustomizingThemes} />
+        <Route exact path="/customizing-themes" component={CustomizingThemes} />
 
-      <Route
-        exact
-        path="/ux-patterns-for-developers"
-        component={UXPatternsForDevelopers}
-      />
+        <Route
+          exact
+          path="/ux-patterns-for-developers"
+          component={UXPatternsForDevelopers}
+        />
 
-      <Route
-        exact
-        path="/working-with-a-design-system"
-        component={WorkingWithADesignSystem}
-      />
+        <Route
+          exact
+          path="/working-with-a-design-system"
+          component={WorkingWithADesignSystem}
+        />
 
-      <Route exact path="/" component={Index} />
+        <Route exact path="/" component={Index} />
 
-      <Route component={NotFound} />
-    </Switch>
-  </Wrapper>
+        <Route component={NotFound} />
+      </Switch>
+    </Wrapper>
+  </BaseProvider>
 );
 export default root;

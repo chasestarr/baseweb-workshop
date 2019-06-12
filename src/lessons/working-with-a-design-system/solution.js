@@ -44,11 +44,11 @@ function WorkingWithADesignSystem() {
   return (
     <Block>
       <HeaderNavigation>
-        <StyledNavigationList align={ALIGN.left}>
+        <StyledNavigationList $align={ALIGN.left}>
           <StyledNavigationItem>Taqueria Mapper</StyledNavigationItem>
         </StyledNavigationList>
-        <StyledNavigationList align={ALIGN.center} />
-        <StyledNavigationList align={ALIGN.right}>
+        <StyledNavigationList $align={ALIGN.center} />
+        <StyledNavigationList $align={ALIGN.right}>
           <StyledNavigationItem>
             <Link href="#">Tab Link One</Link>
           </StyledNavigationItem>
