@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "baseui": "^6.21.0",
+    "baseui": "^7.2.0",
     "fusion-cli": "^1.18.1",
     "fusion-core": "^1.10.6",
     "fusion-plugin-react-router": "^1.5.4",
@@ -19,6 +19,6 @@
     "fusion-tokens": "^1.1.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "styletron-react": "^4.4.6"
+    "styletron-react": "^5.1.2"
   }
 }
