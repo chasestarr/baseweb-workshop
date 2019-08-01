@@ -1,9 +1,9 @@
 import React from "react";
-import {Block} from "baseui/block";
-import {StatefulMenu, NestedMenus, StyledListItem} from "baseui/menu";
-import {StarRating} from "baseui/rating";
+import { Block } from "baseui/block";
+import { StatefulMenu, NestedMenus, StyledListItem } from "baseui/menu";
+import { StarRating } from "baseui/rating";
 
-import {moviesByGenre} from "./data";
+import { moviesByGenre } from "./data";
 
 const MyOption = props => {
   return (
@@ -37,31 +37,33 @@ function ComponentOverrides() {
       <NestedMenus>
         <StatefulMenu
           items={Object.keys(moviesByGenre).map(genre => ({
-            label: genre,
+            label: genre
           }))}
           overrides={{
-            List: {style: {width: "350px", overflow: "auto"}},
+            List: { style: { width: "350px", overflow: "auto" } },
             Option: {
               props: {
                 getChildMenu: item => {
                   return (
                     <StatefulMenu
-                      onItemSelect={({item}) =>
+                      onItemSelect={({ item }) =>
                         window.open(item.Website, "_blank")
                       }
                       items={moviesByGenre[item.label].map(movie => ({
                         label: movie.Title,
-                        ...movie,
+                        ...movie
                       }))}
                       overrides={{
-                        Option: {component: MyOption},
-                        List: {style: {maxHeight: "350px", overflow: "auto"}},
+                        Option: { component: MyOption },
+                        List: {
+                          style: { maxHeight: "350px", overflow: "auto" }
+                        }
                       }}
                     />
                   );
-                },
-              },
-            },
+                }
+              }
+            }
           }}
         />
       </NestedMenus>

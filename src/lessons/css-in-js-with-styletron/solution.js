@@ -13,18 +13,23 @@ const Title = ({ children }) => {
 };
 
 // Encapsulates the styles so that we can copy/paste this code without worry
-// but how to we perform more nuanced styling? (pseudo-selectors/media queries)
+// but how do we perform more nuanced styling? (pseudo-selectors/media queries)
+// refactor this to use useStyletron API and set hover background color to #B4540B
 function DynamicStyling() {
   const [isActive, setIsActive] = useState(false);
+  const [css] = useStyletron();
 
   return (
     <Example>
       <Title>Dynamic Styling</Title>
       <button
-        style={{
-          color: isActive ? "#fff" : "#000",
-          background: isActive ? "#276ef1" : "none"
-        }}
+        className={css({
+          color: isActive ? "#FFF" : "#000",
+          background: isActive ? "#276EF1" : "none",
+          ":hover": {
+            background: "#B4540B"
+          }
+        })}
         onClick={() => setIsActive(!isActive)}
       >
         It is {isActive ? "on" : "off"}!
@@ -33,19 +38,19 @@ function DynamicStyling() {
   );
 }
 
-// Refactor the DynamicStyling example to use the 'useStyletron' hook.
+// Now use the theme values instead of hard-coding hex color values
 function StyledComponent() {
-  const [css] = useStyletron();
+  const [css, theme] = useStyletron();
   const [isActive, setIsActive] = useState(false);
   return (
     <Example>
       <Title>Styled Component</Title>
       <button
         className={css({
-          color: isActive ? "#fff" : "#000",
-          background: isActive ? "#276ef1" : "none",
+          color: isActive ? theme.colors.mono100 : theme.colors.mono1000,
+          background: isActive ? theme.colors.primary : "none",
           ":hover": {
-            background: isActive ? "green" : "yellow"
+            background: theme.colors.warning500
           }
         })}
         onClick={() => setIsActive(!isActive)}

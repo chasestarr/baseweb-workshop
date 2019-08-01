@@ -1,7 +1,7 @@
 import React from "react";
-import {Block} from "baseui/block";
+import { Block } from "baseui/block";
 
-import {moviesByGenre} from "./data";
+import { moviesByGenre } from "./data";
 
 function ComponentOverrides() {
   return (
