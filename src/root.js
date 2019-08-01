@@ -1,9 +1,9 @@
 import React from "react";
-import {BaseProvider, LightTheme, styled} from "baseui";
-import {Block} from "baseui/block";
-import {Tag} from "baseui/tag";
+import { BaseProvider, LightTheme, useStyletron } from "baseui";
+import { Block } from "baseui/block";
+import { Tag } from "baseui/tag";
 
-import {Router, Route, Switch} from "fusion-plugin-react-router";
+import { Router, Route, Switch } from "fusion-plugin-react-router";
 
 import ComponentOverrides from "./lessons/component-overrides";
 import CSSInJSWithStyletron from "./lessons/css-in-js-with-styletron";
@@ -11,41 +11,36 @@ import CustomizingThemes from "./lessons/customizing-themes";
 import UXPatternsForDevelopers from "./lessons/ux-patterns-for-developers";
 import WorkingWithADesignSystem from "./lessons/working-with-a-design-system";
 
-const Border = styled("div", props => {
-  return {
-    border: `solid 1px ${props.$theme.colors.primary}`,
-    borderRadius: props.$theme.borders.radius200,
-    minHeight: "98vh",
-  };
-});
-
-const Label = styled("div", props => {
-  return {
-    ...props.$theme.typography.font100,
-    backgroundColor: props.$theme.colors.primary,
-    borderBottomRightRadius: props.$theme.borders.radius100,
-    color: props.$theme.colors.mono100,
-    display: "inline",
-    paddingLeft: props.$theme.sizing.scale200,
-    paddingRight: props.$theme.sizing.scale200,
-    paddingTop: props.$theme.sizing.scale100,
-    paddingBottom: props.$theme.sizing.scale100,
-    position: "absolute",
-  };
-});
-
 function Wrapper(props) {
+  const [css, theme] = useStyletron();
   return (
-    <Border>
-      <Label>Base Web Workshop</Label>
+    <div
+      className={css({
+        border: `solid 1px ${theme.colors.primary}`,
+        borderRadius: theme.borders.radius200,
+        minHeight: "98vh"
+      })}
+    >
+      <div
+        className={css({
+          ...theme.typography.font100,
+          backgroundColor: theme.colors.primary,
+          borderBottomRightRadius: theme.borders.radius100,
+          color: theme.colors.mono100,
+          display: "inline",
+          paddingLeft: theme.sizing.scale200,
+          paddingRight: theme.sizing.scale200,
+          paddingTop: theme.sizing.scale100,
+          paddingBottom: theme.sizing.scale100,
+          position: "absolute"
+        })}
+      >
+        Base Web Workshop
+      </div>
       {props.children}
-    </Border>
+    </div>
   );
 }
-
-const Center = styled("div", props => {
-  display: "flex";
-});
 
 function NotFound() {
   return (

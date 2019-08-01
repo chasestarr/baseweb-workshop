@@ -1,9 +1,16 @@
-import React, {useState} from "react";
-import {Block} from "baseui/block";
-import {styled} from "styletron-react";
+import React, { useState } from "react";
+import { Block } from "baseui/block";
+import { useStyletron } from "baseui";
 
-const Example = styled("div", {marginTop: "24px"});
-const Title = styled("div", {fontSize: "1em"});
+const Example = ({ children }) => {
+  const [css] = useStyletron();
+  return <div className={css({ marginTop: "24px" })}>{children}</div>;
+};
+
+const Title = ({ children }) => {
+  const [css] = useStyletron();
+  return <div className={css({ fontSize: "1em" })}>{children}</div>;
+};
 
 // Encapsulates the styles so that we can copy/paste this code without worry
 // but how to we perform more nuanced styling? (pseudo-selectors/media queries)
@@ -16,7 +23,7 @@ function DynamicStyling() {
       <button
         style={{
           color: isActive ? "#fff" : "#000",
-          background: isActive ? "#276ef1" : "none",
+          background: isActive ? "#276ef1" : "none"
         }}
         onClick={() => setIsActive(!isActive)}
       >
@@ -26,45 +33,47 @@ function DynamicStyling() {
   );
 }
 
-// Refactor the DynamicStyling example to use the styletron-react 'styled' function.
+// Refactor the DynamicStyling example to use the 'useStyletron' hook.
 function StyledComponent() {
-  const Button = styled("button", props => {
-    return {
-      color: props.$isActive ? "#fff" : "#000",
-      background: props.$isActive ? "#276ef1" : "none",
-      ":hover": {
-        background: props.$isActive ? "green" : "yellow",
-      },
-    };
-  });
-
+  const [css] = useStyletron();
   const [isActive, setIsActive] = useState(false);
   return (
     <Example>
       <Title>Styled Component</Title>
-      <Button $isActive={isActive} onClick={() => setIsActive(!isActive)}>
+      <button
+        className={css({
+          color: isActive ? "#fff" : "#000",
+          background: isActive ? "#276ef1" : "none",
+          ":hover": {
+            background: isActive ? "green" : "yellow"
+          }
+        })}
+        onClick={() => setIsActive(!isActive)}
+      >
         It is {isActive ? "on" : "off"}!
-      </Button>
+      </button>
     </Example>
   );
 }
 
 // Create an example where a parent component applies styles to its children.
 function ChildSelector() {
-  const ButtonGroup = ({children}) => {
+  const ButtonGroup = ({ children }) => {
     return React.Children.map(children, (child, index) =>
-      React.cloneElement(child, {groupIndex: index}),
+      React.cloneElement(child, { groupIndex: index })
     );
   };
 
-  const Button = ({groupIndex, children}) => {
-    const Btn = styled("button", props => ({
-      margin: props.$isGrouped ? "0px" : "0 2em 0 0",
-    }));
+  const Button = ({ groupIndex, children }) => {
+    const [css] = useStyletron();
     return (
-      <Btn $isGrouped={typeof groupIndex !== "undefined"}>
+      <button
+        className={css({
+          margin: typeof groupIndex !== "undefined" ? "0px" : "0 2em 0 0"
+        })}
+      >
         {children} {groupIndex}
-      </Btn>
+      </button>
     );
   };
 
@@ -90,26 +99,23 @@ function ChildSelector() {
 // Create an example where hovering a parent component changes styles of a child.
 function DescendentHover() {
   const [isHovered, setIsHovered] = useState(false);
-
-  const Parent = styled("div", {
-    width: "300px",
-    padding: "4px",
-    backgroundColor: "lightgrey",
-  });
-  const Child = styled("p", props => ({
-    fontColor: props.$isHovered ? "blue" : "green",
-  }));
-
+  const [css] = useStyletron();
   return (
     <Example>
       <Title>Descendent Selectors</Title>
-
-      <Parent
+      <div
+        className={css({
+          width: "300px",
+          padding: "4px",
+          backgroundColor: "lightgrey"
+        })}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <Child>{isHovered ? "hovered" : "not hovered"}</Child>
-      </Parent>
+        <div className={css({ fontColor: isHovered ? "blue" : "green" })}>
+          {isHovered ? "hovered" : "not hovered"}
+        </div>
+      </div>
     </Example>
   );
 }

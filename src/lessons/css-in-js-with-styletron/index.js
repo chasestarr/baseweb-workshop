@@ -1,9 +1,16 @@
-import React, {useState} from "react";
-import {Block} from "baseui/block";
-import {styled} from "styletron-react";
+import React, { useState } from "react";
+import { Block } from "baseui/block";
+import { useStyletron } from "baseui";
 
-const Example = styled("div", {marginTop: "24px"});
-const Title = styled("div", {fontSize: "1em"});
+const Example = ({ children }) => {
+  const [css] = useStyletron();
+  return <div className={css({ marginTop: "24px" })}>{children}</div>;
+};
+
+const Title = ({ children }) => {
+  const [css] = useStyletron();
+  return <div className={css({ fontSize: "1em" })}>{children}</div>;
+};
 
 // Encapsulates the styles so that we can copy/paste this code without worry
 // but how to we perform more nuanced styling? (pseudo-selectors/media queries)
@@ -16,7 +23,7 @@ function DynamicStyling() {
       <button
         style={{
           color: isActive ? "#fff" : "#000",
-          background: isActive ? "#276ef1" : "none",
+          background: isActive ? "#276ef1" : "none"
         }}
         onClick={() => setIsActive(!isActive)}
       >
@@ -26,7 +33,7 @@ function DynamicStyling() {
   );
 }
 
-// Refactor the DynamicStyling example to use the styletron-react 'styled' function.
+// Refactor the DynamicStyling example to use the 'useStyletron' hook.
 function StyledComponent() {
   return (
     <Example>

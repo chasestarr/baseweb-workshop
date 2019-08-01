@@ -1,11 +1,11 @@
 import React from "react";
-import {styled} from "baseui";
-import {Block} from "baseui/block";
-import {Button} from "baseui/button";
+import { useStyletron } from "baseui";
+import { Block } from "baseui/block";
+import { Button } from "baseui/button";
 
-import {Card} from "baseui/card";
+import { Card } from "baseui/card";
 
-import {artworks} from "./data.js";
+import { artworks } from "./data.js";
 
 function truncate(str, max = 50) {
   if (str.length > max) {
@@ -14,23 +14,22 @@ function truncate(str, max = 50) {
   return str;
 }
 
-const Artwork = styled("div", props => {
-  return {
-    display: "flex",
-    boxShadow: props.$theme.lighting.shadow400,
-    marginBottom: props.$theme.sizing.scale300,
-  };
-});
-
 // Right now the artwork information looks flat and complicated. Let's think about how to arrange
 // text so that displays the information usefully; where the most important details stand out.
 // You may want to look at https://baseweb.design/components/typography/
 // Also, how can we best position and style the action buttons on the bottom of each card?
 export default function Hierarchy() {
+  const [css, theme] = useStyletron();
   return (
     <Block margin="scale800" width="800px">
       {artworks.map(artwork => (
-        <Artwork>
+        <div
+          className={css({
+            display: "flex",
+            boxShadow: theme.lighting.shadow400,
+            marginBottom: theme.sizing.scale300
+          })}
+        >
           <Block width="200px" height="200px" overflow="hidden">
             <Block
               $as="img"
@@ -57,7 +56,7 @@ export default function Hierarchy() {
               <Button size="compact">Publish</Button>
             </Block>
           </Block>
-        </Artwork>
+        </div>
       ))}
     </Block>
   );
