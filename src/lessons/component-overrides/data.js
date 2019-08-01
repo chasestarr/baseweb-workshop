@@ -1,3 +1,4 @@
+// @flow
 export const ACTION = "Action";
 export const DRAMA = "Drama";
 export const ROMANCE = "Romance";
@@ -23,8 +24,8 @@ export const movies_raw = [
     Poster:
       "https://m.media-amazon.com/images/M/MV5BMTU0OTc3ODk4Ml5BMl5BanBnXkFtZTgwMzM4NzI5NjM@._V1_SX300.jpg",
     Ratings: [
-      {Source: "Internet Movie Database", Value: "7.8/10"},
-      {Source: "Metacritic", Value: "96/100"},
+      { Source: "Internet Movie Database", Value: "7.8/10" },
+      { Source: "Metacritic", Value: "96/100" }
     ],
     Metascore: "96",
     imdbRating: "7.8",
@@ -35,7 +36,7 @@ export const movies_raw = [
     BoxOffice: "N/A",
     Production: "N/A",
     Website: "N/A",
-    Response: "True",
+    Response: "True"
   },
 
   {
@@ -57,9 +58,9 @@ export const movies_raw = [
     Poster:
       "https://m.media-amazon.com/images/M/MV5BMTg1MTY2MjYzNV5BMl5BanBnXkFtZTgwMTc4NTMwNDI@._V1_SX300.jpg",
     Ratings: [
-      {Source: "Internet Movie Database", Value: "7.3/10"},
-      {Source: "Rotten Tomatoes", Value: "97%"},
-      {Source: "Metacritic", Value: "88/100"},
+      { Source: "Internet Movie Database", Value: "7.3/10" },
+      { Source: "Rotten Tomatoes", Value: "97%" },
+      { Source: "Metacritic", Value: "88/100" }
     ],
     Metascore: "88",
     imdbRating: "7.3",
@@ -70,7 +71,7 @@ export const movies_raw = [
     BoxOffice: "$501,105,037",
     Production: "Marvel Studios",
     Website: "https://www.marvel.com/movies/black-panther",
-    Response: "True",
+    Response: "True"
   },
 
   {
@@ -92,9 +93,9 @@ export const movies_raw = [
     Poster:
       "https://m.media-amazon.com/images/M/MV5BMTA2NDc3Njg5NDVeQTJeQWpwZ15BbWU4MDc1NDcxNTUz._V1_SX300.jpg",
     Ratings: [
-      {Source: "Internet Movie Database", Value: "8.1/10"},
-      {Source: "Rotten Tomatoes", Value: "61%"},
-      {Source: "Metacritic", Value: "49/100"},
+      { Source: "Internet Movie Database", Value: "8.1/10" },
+      { Source: "Rotten Tomatoes", Value: "61%" },
+      { Source: "Metacritic", Value: "49/100" }
     ],
     Metascore: "49",
     imdbRating: "8.1",
@@ -105,7 +106,7 @@ export const movies_raw = [
     BoxOffice: "N/A",
     Production: "20th Century Fox",
     Website: "http://www.bohemianrhapsody.com",
-    Response: "True",
+    Response: "True"
   },
 
   {
@@ -127,9 +128,9 @@ export const movies_raw = [
     Poster:
       "https://m.media-amazon.com/images/M/MV5BYzIzYmJlYTYtNGNiYy00N2EwLTk4ZjItMGYyZTJiOTVkM2RlXkEyXkFqcGdeQXVyODY1NDk1NjE@._V1_SX300.jpg",
     Ratings: [
-      {Source: "Internet Movie Database", Value: "8.3/10"},
-      {Source: "Rotten Tomatoes", Value: "78%"},
-      {Source: "Metacritic", Value: "69/100"},
+      { Source: "Internet Movie Database", Value: "8.3/10" },
+      { Source: "Rotten Tomatoes", Value: "78%" },
+      { Source: "Metacritic", Value: "69/100" }
     ],
     Metascore: "69",
     imdbRating: "8.3",
@@ -140,7 +141,7 @@ export const movies_raw = [
     BoxOffice: "N/A",
     Production: "Universal Pictures",
     Website: "https://www.uphe.com/movies/green-book",
-    Response: "True",
+    Response: "True"
   },
 
   {
@@ -162,9 +163,9 @@ export const movies_raw = [
     Poster:
       "https://m.media-amazon.com/images/M/MV5BMDBhOTMxN2UtYjllYS00NWNiLWE1MzAtZjg3NmExODliMDQ0XkEyXkFqcGdeQXVyMjMxOTE0ODA@._V1_SX300.jpg",
     Ratings: [
-      {Source: "Internet Movie Database", Value: "7.4/10"},
-      {Source: "Rotten Tomatoes", Value: "87%"},
-      {Source: "Metacritic", Value: "84/100"},
+      { Source: "Internet Movie Database", Value: "7.4/10" },
+      { Source: "Rotten Tomatoes", Value: "87%" },
+      { Source: "Metacritic", Value: "84/100" }
     ],
     Metascore: "84",
     imdbRating: "7.4",
@@ -175,7 +176,7 @@ export const movies_raw = [
     BoxOffice: "N/A",
     Production: "Universal Pictures",
     Website: "http://www.firstman.com",
-    Response: "True",
+    Response: "True"
   },
   {
     Title: "BlacKkKlansman",
@@ -197,9 +198,9 @@ export const movies_raw = [
     Poster:
       "https://m.media-amazon.com/images/M/MV5BMjUyOTE1NjI0OF5BMl5BanBnXkFtZTgwMTM4ODQ5NTM@._V1_SX300.jpg",
     Ratings: [
-      {Source: "Internet Movie Database", Value: "7.5/10"},
-      {Source: "Rotten Tomatoes", Value: "96%"},
-      {Source: "Metacritic", Value: "83/100"},
+      { Source: "Internet Movie Database", Value: "7.5/10" },
+      { Source: "Rotten Tomatoes", Value: "96%" },
+      { Source: "Metacritic", Value: "83/100" }
     ],
     Metascore: "83",
     imdbRating: "7.5",
@@ -210,7 +211,7 @@ export const movies_raw = [
     BoxOffice: "N/A",
     Production: "Focus Features",
     Website: "http://www.focusfeatures.com/blackkklansman",
-    Response: "True",
+    Response: "True"
   },
 
   {
@@ -231,9 +232,9 @@ export const movies_raw = [
     Poster:
       "https://m.media-amazon.com/images/M/MV5BMTY1NjM0MzgxMV5BMl5BanBnXkFtZTgwNDc4NTY0NjM@._V1_SX300.jpg",
     Ratings: [
-      {Source: "Internet Movie Database", Value: "7.2/10"},
-      {Source: "Rotten Tomatoes", Value: "66%"},
-      {Source: "Metacritic", Value: "61/100"},
+      { Source: "Internet Movie Database", Value: "7.2/10" },
+      { Source: "Rotten Tomatoes", Value: "66%" },
+      { Source: "Metacritic", Value: "61/100" }
     ],
     Metascore: "61",
     imdbRating: "7.2",
@@ -244,7 +245,7 @@ export const movies_raw = [
     BoxOffice: "N/A",
     Production: "Annapurna Pictures",
     Website: "N/A",
-    Response: "True",
+    Response: "True"
   },
 
   {
@@ -266,9 +267,9 @@ export const movies_raw = [
     Poster:
       "https://m.media-amazon.com/images/M/MV5BMjMwNDkxMTgzOF5BMl5BanBnXkFtZTgwNTkwNTQ3NjM@._V1_SX300.jpg",
     Ratings: [
-      {Source: "Internet Movie Database", Value: "8.5/10"},
-      {Source: "Rotten Tomatoes", Value: "97%"},
-      {Source: "Metacritic", Value: "87/100"},
+      { Source: "Internet Movie Database", Value: "8.5/10" },
+      { Source: "Rotten Tomatoes", Value: "97%" },
+      { Source: "Metacritic", Value: "87/100" }
     ],
     Metascore: "87",
     imdbRating: "8.5",
@@ -279,7 +280,7 @@ export const movies_raw = [
     BoxOffice: "N/A",
     Production: "Sony Pictures",
     Website: "http://www.intothespiderverse.movie/",
-    Response: "True",
+    Response: "True"
   },
 
   {
@@ -300,9 +301,9 @@ export const movies_raw = [
     Poster:
       "https://m.media-amazon.com/images/M/MV5BMjMwYjcwNWQtNTQ5YS00MzVlLTkxYzMtNDIwZWIxZTE4Zjg2XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
     Ratings: [
-      {Source: "Internet Movie Database", Value: "8.3/10"},
-      {Source: "Rotten Tomatoes", Value: "98%"},
-      {Source: "Metacritic", Value: "83/100"},
+      { Source: "Internet Movie Database", Value: "8.3/10" },
+      { Source: "Rotten Tomatoes", Value: "98%" },
+      { Source: "Metacritic", Value: "83/100" }
     ],
     Metascore: "83",
     imdbRating: "8.3",
@@ -313,7 +314,7 @@ export const movies_raw = [
     BoxOffice: "N/A",
     Production: "Greenwich Entertainment",
     Website: "http://www.nationalgeographic.com/films/free-solo/",
-    Response: "True",
+    Response: "True"
   },
 
   {
@@ -334,9 +335,9 @@ export const movies_raw = [
     Poster:
       "https://m.media-amazon.com/images/M/MV5BMTg3Mzk4MjU0Ml5BMl5BanBnXkFtZTgwMzQ3MjkxNjM@._V1_SX300.jpg",
     Ratings: [
-      {Source: "Internet Movie Database", Value: "7.7/10"},
-      {Source: "Rotten Tomatoes", Value: "93%"},
-      {Source: "Metacritic", Value: "90/100"},
+      { Source: "Internet Movie Database", Value: "7.7/10" },
+      { Source: "Rotten Tomatoes", Value: "93%" },
+      { Source: "Metacritic", Value: "90/100" }
     ],
     Metascore: "90",
     imdbRating: "7.7",
@@ -347,7 +348,7 @@ export const movies_raw = [
     BoxOffice: "N/A",
     Production: "Fox Searchlight Pictures, Film4 and Waypoint",
     Website: "http://www.foxsearchlight.com/thefavourite/",
-    Response: "True",
+    Response: "True"
   },
 
   {
@@ -369,9 +370,9 @@ export const movies_raw = [
     Poster:
       "https://m.media-amazon.com/images/M/MV5BNmE5ZmE3OGItNTdlNC00YmMxLWEzNjctYzAwOGQ5ODg0OTI0XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg",
     Ratings: [
-      {Source: "Internet Movie Database", Value: "7.8/10"},
-      {Source: "Rotten Tomatoes", Value: "89%"},
-      {Source: "Metacritic", Value: "88/100"},
+      { Source: "Internet Movie Database", Value: "7.8/10" },
+      { Source: "Rotten Tomatoes", Value: "89%" },
+      { Source: "Metacritic", Value: "88/100" }
     ],
     Metascore: "88",
     imdbRating: "7.8",
@@ -382,7 +383,7 @@ export const movies_raw = [
     BoxOffice: "N/A",
     Production: "Warner Bros. Pictures",
     Website: "http://www.astarisbornmovie.com/",
-    Response: "True",
+    Response: "True"
   },
 
   {
@@ -404,9 +405,9 @@ export const movies_raw = [
     Poster:
       "https://m.media-amazon.com/images/M/MV5BZWVkMzY5NzgtMTdlNS00NjY5LThjOTktZWFkNDU3NmQzMDIwXkEyXkFqcGdeQXVyODk2NDQ3MTA@._V1_SX300.jpg",
     Ratings: [
-      {Source: "Internet Movie Database", Value: "7.4/10"},
-      {Source: "Rotten Tomatoes", Value: "95%"},
-      {Source: "Metacritic", Value: "87/100"},
+      { Source: "Internet Movie Database", Value: "7.4/10" },
+      { Source: "Rotten Tomatoes", Value: "95%" },
+      { Source: "Metacritic", Value: "87/100" }
     ],
     Metascore: "87",
     imdbRating: "7.4",
@@ -417,7 +418,7 @@ export const movies_raw = [
     BoxOffice: "N/A",
     Production: "Annapurna Pictures",
     Website: "http://bealestreet.movie/",
-    Response: "True",
+    Response: "True"
   },
 
   {
@@ -439,9 +440,9 @@ export const movies_raw = [
     Poster:
       "https://m.media-amazon.com/images/M/MV5BMTk0NDIzMTA1MF5BMl5BanBnXkFtZTgwMzM0MTUzNjM@._V1_SX300.jpg",
     Ratings: [
-      {Source: "Internet Movie Database", Value: "7.2/10"},
-      {Source: "Rotten Tomatoes", Value: "79%"},
-      {Source: "Metacritic", Value: "66/100"},
+      { Source: "Internet Movie Database", Value: "7.2/10" },
+      { Source: "Rotten Tomatoes", Value: "79%" },
+      { Source: "Metacritic", Value: "66/100" }
     ],
     Metascore: "66",
     imdbRating: "7.2",
@@ -452,7 +453,7 @@ export const movies_raw = [
     BoxOffice: "N/A",
     Production: "Walt Disney Pictures",
     Website: "http://movies.disney.com/mary-poppins-returns",
-    Response: "True",
+    Response: "True"
   },
 
   {
@@ -474,8 +475,8 @@ export const movies_raw = [
     Poster:
       "https://m.media-amazon.com/images/M/MV5BNDVmOGI4MTMtYmNmNC00MTliLTlkYjQtYmU2N2EyNDk2YTAwXkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_SX300.jpg",
     Ratings: [
-      {Source: "Internet Movie Database", Value: "6.3/10"},
-      {Source: "Metacritic", Value: "60/100"},
+      { Source: "Internet Movie Database", Value: "6.3/10" },
+      { Source: "Metacritic", Value: "60/100" }
     ],
     Metascore: "60",
     imdbRating: "6.3",
@@ -486,7 +487,7 @@ export const movies_raw = [
     BoxOffice: "N/A",
     Production: "Metrodome",
     Website: "http://www.maryqueenofscots-movie.com/",
-    Response: "True",
+    Response: "True"
   },
 
   {
@@ -507,9 +508,9 @@ export const movies_raw = [
     Poster:
       "https://m.media-amazon.com/images/M/MV5BMTEzNzY0OTg0NTdeQTJeQWpwZ15BbWU4MDU3OTg3MjUz._V1_SX300.jpg",
     Ratings: [
-      {Source: "Internet Movie Database", Value: "7.7/10"},
-      {Source: "Rotten Tomatoes", Value: "94%"},
-      {Source: "Metacritic", Value: "80/100"},
+      { Source: "Internet Movie Database", Value: "7.7/10" },
+      { Source: "Rotten Tomatoes", Value: "94%" },
+      { Source: "Metacritic", Value: "80/100" }
     ],
     Metascore: "80",
     imdbRating: "7.7",
@@ -520,7 +521,7 @@ export const movies_raw = [
     BoxOffice: "N/A",
     Production: "Disney/Pixar",
     Website: "http://movies.disney.com/the-incredibles-2",
-    Response: "True",
+    Response: "True"
   },
 
   {
@@ -542,9 +543,9 @@ export const movies_raw = [
     Poster:
       "https://m.media-amazon.com/images/M/MV5BMTYyOTUwNjAxM15BMl5BanBnXkFtZTgwODcyMzE0NDM@._V1_SX300.jpg",
     Ratings: [
-      {Source: "Internet Movie Database", Value: "7.9/10"},
-      {Source: "Rotten Tomatoes", Value: "90%"},
-      {Source: "Metacritic", Value: "82/100"},
+      { Source: "Internet Movie Database", Value: "7.9/10" },
+      { Source: "Rotten Tomatoes", Value: "90%" },
+      { Source: "Metacritic", Value: "82/100" }
     ],
     Metascore: "82",
     imdbRating: "7.9",
@@ -555,7 +556,7 @@ export const movies_raw = [
     BoxOffice: "N/A",
     Production: "Fox Searchlight Pictures",
     Website: "http://www.isleofdogsmovie.com/",
-    Response: "True",
+    Response: "True"
   },
 
   {
@@ -577,9 +578,9 @@ export const movies_raw = [
     Poster:
       "https://m.media-amazon.com/images/M/MV5BYjRkYTI3M2EtZWQ4Ny00OTA2LWFmMTMtY2E4MTEyZmNjOTMxXkEyXkFqcGdeQXVyNDg4NjY5OTQ@._V1_SX300.jpg",
     Ratings: [
-      {Source: "Internet Movie Database", Value: "7.3/10"},
-      {Source: "Rotten Tomatoes", Value: "91%"},
-      {Source: "Metacritic", Value: "79/100"},
+      { Source: "Internet Movie Database", Value: "7.3/10" },
+      { Source: "Rotten Tomatoes", Value: "91%" },
+      { Source: "Metacritic", Value: "79/100" }
     ],
     Metascore: "79",
     imdbRating: "7.3",
@@ -590,7 +591,7 @@ export const movies_raw = [
     BoxOffice: "N/A",
     Production: "Netflix",
     Website: "N/A",
-    Response: "True",
+    Response: "True"
   },
 
   {
@@ -612,9 +613,9 @@ export const movies_raw = [
     Poster:
       "https://m.media-amazon.com/images/M/MV5BY2JiYTNmZTctYTQ1OC00YjU4LWEwMjYtZjkwY2Y5MDI0OTU3XkEyXkFqcGdeQXVyNTI4MzE4MDU@._V1_SX300.jpg",
     Ratings: [
-      {Source: "Internet Movie Database", Value: "7.5/10"},
-      {Source: "Rotten Tomatoes", Value: "72%"},
-      {Source: "Metacritic", Value: "64/100"},
+      { Source: "Internet Movie Database", Value: "7.5/10" },
+      { Source: "Rotten Tomatoes", Value: "72%" },
+      { Source: "Metacritic", Value: "64/100" }
     ],
     Metascore: "64",
     imdbRating: "7.5",
@@ -625,7 +626,7 @@ export const movies_raw = [
     BoxOffice: "N/A",
     Production: "Warner Bros. Pictures",
     Website: "http://readyplayeronemovie.com/",
-    Response: "True",
+    Response: "True"
   },
 
   {
@@ -647,9 +648,9 @@ export const movies_raw = [
     Poster:
       "https://m.media-amazon.com/images/M/MV5BZDI1MGIyZDMtYjAyMy00ZWE1LTgzYjctYzM5MzczNjFjZWQwXkEyXkFqcGdeQXVyODQyNzE3MDg@._V1_SX300.jpg",
     Ratings: [
-      {Source: "Internet Movie Database", Value: "7.1/10"},
-      {Source: "Rotten Tomatoes", Value: "93%"},
-      {Source: "Metacritic", Value: "85/100"},
+      { Source: "Internet Movie Database", Value: "7.1/10" },
+      { Source: "Rotten Tomatoes", Value: "93%" },
+      { Source: "Metacritic", Value: "85/100" }
     ],
     Metascore: "85",
     imdbRating: "7.1",
@@ -660,7 +661,7 @@ export const movies_raw = [
     BoxOffice: "N/A",
     Production: "A24",
     Website: "N/A",
-    Response: "True",
+    Response: "True"
   },
 
   {
@@ -682,9 +683,9 @@ export const movies_raw = [
     Poster:
       "https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SX300.jpg",
     Ratings: [
-      {Source: "Internet Movie Database", Value: "8.5/10"},
-      {Source: "Rotten Tomatoes", Value: "85%"},
-      {Source: "Metacritic", Value: "68/100"},
+      { Source: "Internet Movie Database", Value: "8.5/10" },
+      { Source: "Rotten Tomatoes", Value: "85%" },
+      { Source: "Metacritic", Value: "68/100" }
     ],
     Metascore: "68",
     imdbRating: "8.5",
@@ -695,7 +696,7 @@ export const movies_raw = [
     BoxOffice: "$664,987,816",
     Production: "Walt Disney Pictures",
     Website: "http://marvel.com/movies/movie/223/avengers_infinity_war",
-    Response: "True",
+    Response: "True"
   },
 
   {
@@ -717,9 +718,9 @@ export const movies_raw = [
     Poster:
       "https://m.media-amazon.com/images/M/MV5BOTM2NTI3NTc3Nl5BMl5BanBnXkFtZTgwNzM1OTQyNTM@._V1_SX300.jpg",
     Ratings: [
-      {Source: "Internet Movie Database", Value: "7.0/10"},
-      {Source: "Rotten Tomatoes", Value: "70%"},
-      {Source: "Metacritic", Value: "62/100"},
+      { Source: "Internet Movie Database", Value: "7.0/10" },
+      { Source: "Rotten Tomatoes", Value: "70%" },
+      { Source: "Metacritic", Value: "62/100" }
     ],
     Metascore: "62",
     imdbRating: "7.0",
@@ -730,8 +731,8 @@ export const movies_raw = [
     BoxOffice: "N/A",
     Production: "Walt Disney Pictures",
     Website: "http://www.starwars.com/films/solo",
-    Response: "True",
-  },
+    Response: "True"
+  }
 ];
 
 export const moviesByGenre = movies_raw.reduce((acc, cur) => {

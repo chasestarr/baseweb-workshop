@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "baseui": "^8.12.0",
+    "flow-bin": "^0.104.0",
     "fusion-cli": "^2.2.0",
     "fusion-core": "^2.0.2",
     "fusion-plugin-react-router": "^2.0.4",

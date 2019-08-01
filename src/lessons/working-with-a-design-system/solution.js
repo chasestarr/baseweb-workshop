@@ -1,41 +1,42 @@
-import React, {useState} from "react";
-import {Block} from "baseui/block";
-import {Button, KIND} from "baseui/button";
-import {StatefulButtonGroup} from "baseui/button-group";
-import {FormControl} from "baseui/form-control";
+// @flow
+import React, { useState } from "react";
+import { Block } from "baseui/block";
+import { Button, KIND } from "baseui/button";
+import { StatefulButtonGroup } from "baseui/button-group";
+import { FormControl } from "baseui/form-control";
 import {
   HeaderNavigation,
   ALIGN,
   StyledNavigationItem,
-  StyledNavigationList,
+  StyledNavigationList
 } from "baseui/header-navigation";
 import Plus from "baseui/icon/plus";
 import TriangleDown from "baseui/icon/triangle-down";
 import Upload from "baseui/icon/upload";
-import {StyledLink as Link} from "baseui/link";
-import {StatefulMenu} from "baseui/menu";
-import {Pagination} from "baseui/pagination";
-import {StatefulPopover, PLACEMENT} from "baseui/popover";
-import {StatefulSelect} from "baseui/select";
-import {Navigation} from "baseui/side-navigation";
-import {Table} from "baseui/table";
+import { StyledLink as Link } from "baseui/link";
+import { StatefulMenu } from "baseui/menu";
+import { Pagination } from "baseui/pagination";
+import { StatefulPopover, PLACEMENT } from "baseui/popover";
+import { StatefulSelect } from "baseui/select";
+import { Navigation } from "baseui/side-navigation";
+import { Table } from "baseui/table";
 
-import {cities, taquerias} from "./data";
+import { cities, taquerias } from "./data";
 
 const nav = [
   {
     title: "Today's taquerias",
     itemId: "#today",
     subnav: [
-      {title: "Top rated", itemId: "#top"},
-      {title: "Lowest rated", itemId: "#lowest"},
-      {title: "Wish list", itemId: "#wish"},
-      {title: "Seen", itemId: "#seen"},
-    ],
+      { title: "Top rated", itemId: "#top" },
+      { title: "Lowest rated", itemId: "#lowest" },
+      { title: "Wish list", itemId: "#wish" },
+      { title: "Seen", itemId: "#seen" }
+    ]
   },
-  {title: "Scheduled", itemId: "#scheduled"},
-  {title: "Recommended", itemId: "#recommended"},
-  {title: "Taqueria history", itemId: "#history"},
+  { title: "Scheduled", itemId: "#scheduled" },
+  { title: "Recommended", itemId: "#recommended" },
+  { title: "Taqueria history", itemId: "#history" }
 ];
 
 function WorkingWithADesignSystem() {
@@ -74,7 +75,7 @@ function WorkingWithADesignSystem() {
             <Navigation
               items={nav}
               activeItemId={location}
-              onChange={({item}) => setLocation(item.itemId)}
+              onChange={({ item }) => setLocation(item.itemId)}
             />
           </Block>
         </Block>
@@ -92,7 +93,7 @@ function WorkingWithADesignSystem() {
               <Block width="300px">
                 <FormControl label="City">
                   <StatefulSelect
-                    options={cities.map(c => ({id: c}))}
+                    options={cities.map(c => ({ id: c }))}
                     labelKey="id"
                     valueKey="id"
                   />
@@ -103,7 +104,7 @@ function WorkingWithADesignSystem() {
                 <FormControl label="Time Scale">
                   <StatefulButtonGroup
                     mode="radio"
-                    initialState={{selected: 0}}
+                    initialState={{ selected: 0 }}
                   >
                     <Button>Day</Button>
                     <Button>Week</Button>
@@ -126,7 +127,7 @@ function WorkingWithADesignSystem() {
                 "Name",
                 "Established Date",
                 "My Score",
-                "Overall Score",
+                "Overall Score"
               ]}
               data={taquerias}
             />
@@ -137,12 +138,14 @@ function WorkingWithADesignSystem() {
               paddingTop="scale800"
             >
               <StatefulPopover
-                content={({close}) => (
+                content={({ close }) => (
                   <StatefulMenu
-                    items={[...new Array(100)].map((_, i) => ({label: i + 1}))}
+                    items={[...new Array(100)].map((_, i) => ({
+                      label: i + 1
+                    }))}
                     onItemSelect={close}
                     overrides={{
-                      List: {style: {height: "150px", width: "100px"}},
+                      List: { style: { height: "150px", width: "100px" } }
                     }}
                   />
                 )}

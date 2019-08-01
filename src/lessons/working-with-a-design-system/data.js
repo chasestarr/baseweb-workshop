@@ -1,3 +1,4 @@
+// @flow
 export const taquerias = [
   // [name, year opened, your score, overall score]
   ["El Castillito", 2000, null, 2.0],
@@ -14,12 +15,12 @@ export const taquerias = [
   ["Taqueria Cancun", 2011, 2.5, 3.1],
   ["Taqueria Guadalajara", 2015, null, 2.8],
   ["La Altena", 1995, 4.2, 4.5],
-  ["El Toro", 2003, 5, 4.9],
+  ["El Toro", 2003, 5, 4.9]
 ];
 
 export const cities = [
   "Los Angeles",
   "Sacramento",
   "San Diego",
-  "San Francisco",
+  "San Francisco"
 ];

@@ -1,4 +1,5 @@
-import React from "react";
+// @flow
+import * as React from "react";
 import { useStyletron } from "baseui";
 import { Block } from "baseui/block";
 import { Button } from "baseui/button";

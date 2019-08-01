@@ -1,3 +1,4 @@
+// @flow
 import React from "react";
 import { BaseProvider, LightTheme, useStyletron } from "baseui";
 import { Block } from "baseui/block";

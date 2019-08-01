@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+// @flow
+import * as React from "react";
 import { Block } from "baseui/block";
 import { useStyletron } from "baseui";
 
@@ -16,7 +17,7 @@ const Title = ({ children }) => {
 // but how do we perform more nuanced styling? (pseudo-selectors/media queries)
 // refactor this to use useStyletron API and set hover background color to #B4540B
 function DynamicStyling() {
-  const [isActive, setIsActive] = useState(false);
+  const [isActive, setIsActive] = React.useState(false);
   const [css] = useStyletron();
 
   return (
@@ -41,7 +42,7 @@ function DynamicStyling() {
 // Now use the theme values instead of hard-coding hex color values
 function StyledComponent() {
   const [css, theme] = useStyletron();
-  const [isActive, setIsActive] = useState(false);
+  const [isActive, setIsActive] = React.useState(false);
   return (
     <Example>
       <Title>Styled Component</Title>
@@ -69,7 +70,10 @@ function ChildSelector() {
     );
   };
 
-  const Button = ({ groupIndex, children }) => {
+  const Button: React.StatelessFunctionalComponent<{
+    groupIndex?: number,
+    children: React.Node
+  }> = ({ groupIndex, children }) => {
     const [css] = useStyletron();
     return (
       <button
@@ -103,7 +107,7 @@ function ChildSelector() {
 
 // Create an example where hovering a parent component changes styles of a child.
 function DescendentHover() {
-  const [isHovered, setIsHovered] = useState(false);
+  const [isHovered, setIsHovered] = React.useState(false);
   const [css] = useStyletron();
   return (
     <Example>
@@ -117,7 +121,7 @@ function DescendentHover() {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <div className={css({ fontColor: isHovered ? "blue" : "green" })}>
+        <div className={css({ color: isHovered ? "blue" : "green" })}>
           {isHovered ? "hovered" : "not hovered"}
         </div>
       </div>

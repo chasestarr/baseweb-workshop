@@ -1,3 +1,4 @@
+// @flow
 import React, { useState } from "react";
 import { assetUrl } from "fusion-core";
 import { Block } from "baseui/block";
