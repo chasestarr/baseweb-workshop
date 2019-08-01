@@ -1,5 +1,5 @@
 import React from "react";
-import {Block} from "baseui/block";
+import { Block } from "baseui/block";
 
 import EmptyState from "./empty-state.js";
 import Hierarchy from "./hierarchy.js";

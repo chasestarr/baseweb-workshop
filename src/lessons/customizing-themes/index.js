@@ -1,5 +1,6 @@
 import React from "react";
-import {Block} from "baseui/block";
+import { Block } from "baseui/block";
+import { assetUrl } from "fusion-core";
 
 // purple color scale:
 // "#F0EEFE"
@@ -13,8 +14,8 @@ import {Block} from "baseui/block";
 
 function CustomizingThemes() {
   return (
-    <Block display="flex" justifyContent="center" font="font500">
-      Customizing Themes
+    <Block display="flex" justifyContent="center">
+      <img src={assetUrl("./mockup_themes.png")} width="60%" />
     </Block>
   );
 }

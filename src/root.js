@@ -5,7 +5,7 @@ import { Tag } from "baseui/tag";
 
 import { Router, Route, Switch } from "fusion-plugin-react-router";
 
-import ComponentOverrides from "./lessons/component-overrides/solution";
+import ComponentOverrides from "./lessons/component-overrides";
 import CSSInJSWithStyletron from "./lessons/css-in-js-with-styletron";
 import CustomizingThemes from "./lessons/customizing-themes";
 import UXPatternsForDevelopers from "./lessons/ux-patterns-for-developers";
