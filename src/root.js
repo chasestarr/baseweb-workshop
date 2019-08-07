@@ -6,6 +6,7 @@ import { Tag } from "baseui/tag";
 
 import { Router, Route, Switch } from "fusion-plugin-react-router";
 
+import SimpleComponentOverrides from "./lessons/simple-component-overrides";
 import ComponentOverrides from "./lessons/component-overrides";
 import CSSInJSWithStyletron from "./lessons/css-in-js-with-styletron";
 import CustomizingThemes from "./lessons/customizing-themes";
@@ -23,6 +24,11 @@ const Root = () => {
         })}
       >
         <Switch>
+          <Route
+            exact
+            path="/simple-component-overrides"
+            component={SimpleComponentOverrides}
+          />
           <Route
             exact
             path="/component-overrides"
@@ -60,14 +66,14 @@ const Root = () => {
               <Block display="flex" justifyContent="center" font="font500">
                 <ul>
                   <li>
-                    <a href="/working-with-a-design-system">
-                      working with a design system
+                    <a href="/css-in-js-with-styletron">
+                      css in js with styletron
                     </a>
                   </li>
 
                   <li>
-                    <a href="/css-in-js-with-styletron">
-                      css in js with styletron
+                    <a href="/simple-component-overrides">
+                      simple component overrides
                     </a>
                   </li>
 
@@ -81,7 +87,12 @@ const Root = () => {
 
                   <li>
                     <a href="/ux-patterns-for-developers">
-                      ux patterns for developers
+                      ( ux patterns for developers )
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/working-with-a-design-system">
+                      ( working with a design system )
                     </a>
                   </li>
                 </ul>
