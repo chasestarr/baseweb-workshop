@@ -1,12 +1,21 @@
-import React, {useState} from "react";
-import {Block} from "baseui/block";
-import {styled} from "styletron-react";
+// @flow
+import React, { useState } from "react";
+import { Block } from "baseui/block";
+import { useStyletron } from "baseui";
 
-const Example = styled("div", {marginTop: "24px"});
-const Title = styled("div", {fontSize: "1em"});
+const Example = ({ children }) => {
+  const [css] = useStyletron();
+  return <div className={css({ marginTop: "24px" })}>{children}</div>;
+};
+
+const Title = ({ children }) => {
+  const [css] = useStyletron();
+  return <div className={css({ fontSize: "1em" })}>{children}</div>;
+};
 
 // Encapsulates the styles so that we can copy/paste this code without worry
-// but how to we perform more nuanced styling? (pseudo-selectors/media queries)
+// but how do we perform more nuanced styling? (pseudo-selectors/media queries)
+// refactor this to use useStyletron API and set hover background color to #B4540B
 function DynamicStyling() {
   const [isActive, setIsActive] = useState(false);
 
@@ -16,7 +25,7 @@ function DynamicStyling() {
       <button
         style={{
           color: isActive ? "#fff" : "#000",
-          background: isActive ? "#276ef1" : "none",
+          background: isActive ? "#276ef1" : "none"
         }}
         onClick={() => setIsActive(!isActive)}
       >
@@ -26,7 +35,7 @@ function DynamicStyling() {
   );
 }
 
-// Refactor the DynamicStyling example to use the styletron-react 'styled' function.
+// Now use the theme values instead of hard-coding hex color values
 function StyledComponent() {
   return (
     <Example>

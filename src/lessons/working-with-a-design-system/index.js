@@ -1,12 +1,14 @@
-import React, {useState} from "react";
-import {Block} from "baseui/block";
+// @flow
+import React, { useState } from "react";
+import { assetUrl } from "fusion-core";
+import { Block } from "baseui/block";
 
-import {cities, taquerias} from "./data";
+import { cities, taquerias } from "./data";
 
 function WorkingWithADesignSystem() {
   return (
-    <Block display="flex" justifyContent="center" font="font500">
-      Working with a Design System
+    <Block display="flex" justifyContent="center">
+      <img src={assetUrl("./mockup_system.png")} width="100%" />
     </Block>
   );
 }

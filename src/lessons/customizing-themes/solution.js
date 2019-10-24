@@ -1,16 +1,31 @@
+// @flow
 import React from "react";
-import {styled, ThemeProvider, lightThemePrimitives, createTheme} from "baseui";
-import {Block} from "baseui/block";
-import {Button} from "baseui/button";
-import {FormControl} from "baseui/form-control";
-import {StatefulInput} from "baseui/input";
-import {StatefulTextarea} from "baseui/textarea";
+import {
+  ThemeProvider,
+  lightThemePrimitives,
+  createTheme,
+  useStyletron
+} from "baseui";
+import { Block } from "baseui/block";
+import { Button } from "baseui/button";
+import { FormControl } from "baseui/form-control";
+import { StatefulInput } from "baseui/input";
+import { StatefulTextarea } from "baseui/textarea";
 
-const Row = styled("div", {
-  display: "flex",
-  justifyContent: "space-between",
-  alignItems: "center",
-});
+const Row = ({ children }) => {
+  const [css] = useStyletron();
+  return (
+    <div
+      className={css({
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center"
+      })}
+    >
+      {children}
+    </div>
+  );
+};
 
 const theme = createTheme(
   {
@@ -22,9 +37,9 @@ const theme = createTheme(
     primary400: "#4327F1",
     primary500: "#331EB7",
     primary600: "#281791",
-    primary700: "#1B1060",
+    primary700: "#1B1060"
   },
-  {},
+  {}
 );
 
 const cancelTheme = createTheme({
@@ -36,7 +51,7 @@ const cancelTheme = createTheme({
   primary400: theme.colors.negative400,
   primary500: theme.colors.negative500,
   primary600: theme.colors.negative600,
-  primary700: theme.colors.negative700,
+  primary700: theme.colors.negative700
 });
 
 // A red 'cancel' button is probably not the best approach to information hierarchy.
